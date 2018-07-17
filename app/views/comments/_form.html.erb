@@ -1,0 +1,15 @@
+<div class="card" style="width: 50rem;">
+  <div class="card-body">
+    <h5 class="card-title">댓글 쓰기</h5>
+    <%= form_for :comment, url: article_comments_path(@article.id) do |f| %>
+      <p>
+        <%= f.label :body, '내용' %><br>
+        <%= f.text_area :body, :cols => 50, :rows => 1 %>
+      </p>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <p>
+        <%= f.submit '작성', class: 'btn btn-secondary' %>
+      </p>
+    <% end %>
+  </div>
+</div>
