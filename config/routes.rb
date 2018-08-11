@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  # rails g devise User 명령어를 통해 생성된 코드
   devise_for :users, :controllers => { registrations: 'registrations' }
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  # rails g devise User 명령어를 통해 생성된 코드
+
   
   root 'articles#index'
   

@@ -6,10 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-user1 = User.create(email: 'admin1@naver.com', password: 'qwer1234')
+user1 = User.create(email: 'admin@likelion.org', password: 'asdfasdf')
 user1 = User.find(1)
 user1.add_role :admin
 
-user2 = User.create(email: 'admin2@naver.com', password: 'qwer1234')
+user2 = User.create(email: 'maladroit1@likelion.org', password: 'asdfasdf')
 user2 = User.find(2)
-user2.add_role :admin
+user2.add_role :student

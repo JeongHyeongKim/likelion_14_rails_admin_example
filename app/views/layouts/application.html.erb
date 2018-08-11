@@ -16,9 +16,19 @@
         <h3 class="display-7">충북대 X 멋사 6기</h1>
         <nav style="float:right" >
           <ul class="nav">
-            <% if user_signed_in? %>
+
+              <% if user_signed_in? %>
+                <% if current_user.has_role? :admin %>
+                  <li class="nav-item">
+                    <a class="nav-link deactivate"><%=link_to '관리자페이지', rails_admin_path, class: "nav-link"%></a>
+                  </li>
+              <% end %>
+
               <li class="nav-item">
-                <a class="nav-link deactivate"><%= current_user.name %></a>
+                <a class="nav-link deactivate"><%= current_user.email %></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link deactivate">
               </li>
               <li class="nav-item">
                 <%= link_to '로그아웃', destroy_user_session_path, method: :delete, class: "nav-link" %>

@@ -15,6 +15,11 @@ gem 'devise'
 gem 'cancancan'
 gem 'rolify'
 
+gem 'rails_admin' #admin페이지 생성을 도와줄 gem
+gem 'rails_admin-i18n'
+gem 'i18n' #영어를 한글로 번역해줄 gem
+
+
 gem 'rails_db'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.0.6'
